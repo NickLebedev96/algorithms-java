@@ -1,5 +1,7 @@
 package algorithm.binary_search;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
     /**
@@ -11,6 +13,9 @@ public class BinarySearch {
      * в массиве нет - ответом будет -1
      */
     public static int rank(int key, int[] arr) {
+
+        //Алгоритм работает только с отсортированными массивами
+        Arrays.sort(arr);
 
         int firstIndex = 0;
         int lastIndex = arr.length - 1;
